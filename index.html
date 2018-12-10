@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twelve Days of Christmas Program</title>
+    <style>
+        body {
+            background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Weihnachtsmarktindresden.jpg/2560px-Weihnachtsmarktindresden.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            color: white;
+        }
+
+        section#sectionForBackgroundOpacity {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: black;
+            opacity: .7;
+        }
+
+        section#mainSection {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            margin-left: 20%;
+        }
+
+        h4 {
+            margin-left: 15%;
+        }
+
+        a {
+            color: white;
+        }
+
+        div#codeDiv {
+            margin-left: 15%;
+        }
+
+        span.span2em {
+            margin-left: 2em;
+        }
+
+        span.span3em {
+            margin-left: 3em;
+        }
+
+        span.span4em {
+            margin-left: 4em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section id="sectionForBackgroundOpacity"></section>
+
+    <section id="mainSection">
+        <h1>The <i>Twelve Days of Christmas</i> Function</h1>
+
+        <h3>How many items are there in <i>The Twelve Days of Christmas</i>?
+            This JS function will tell us:</h3>
+
+        <div id="codeDiv">
+            <code>
+                function howManyItemsInTwelveDaysOfChristmas() {
+                <br>
+                <span class="span2em">let runningTotal = 0;</span>
+                <br>
+                <span class="span2em">for (let i = 1; i <= 12; i ++) { </span>
+                <br>
+                <span class="span3em">let counterForEachDay = 0;</span>
+                <br>
+                <span class="span3em">for (let j = 1; j <= i; j++) {</span>
+                <br>
+                <span class="span4em">counterForEachDay += j;</span>
+                        <br>
+                <span class="span3em">}</span>
+                <br>
+                <span class="span3em">runningTotal += counterForEachDay;</span>
+                <br>
+                <span class="span2em">}</span>
+                <br>
+                <span class="span2em">document.getElementById("resultsSpan").innerHTML = runningTotal;
+                </span>
+                <br>
+                };
+                <br>
+                <br>
+                howManyItemsInTwelveDaysOfChristmas();
+            </code>
+        </div>
+
+        <p>The output of this function appears below.</p>
+
+        <p>The total number of items is: <span id="resultsSpan"></span></p>
+
+        <h4><a href="https://github.com/NDHF/twelveDaysOfChristmas/blob/master/README.md">Check out the ReadMe on GitHub.</a></h4>
+    </section>
+
+    <script src="twelveDaysOfChristmas.js"></script>
+
+
+</body>
+
+</html>
